@@ -61,13 +61,13 @@ Team Number: 14
 ## Screenshots
 
 Procedure A, step 3:
-![Put path to your image here ->](img\Blinking.jpg)
+![Put path to your image here ->](img/Blinking.jpg)
 
 Procedure A, step 7:
-![Put path to your image here ->](img\Dimming.jpg)
+![Put path to your image here ->](img/Dimming.jpg)
 
 Procedure B, UART:
-![Put path to your image here ->](img\UART.jpg)
+![Put path to your image here ->](imgUART.jpg)
 
 Procedure B, SPI:
-![Put path to your image here ->](img\SPI.jpg)
+![Put path to your image here ->](img/SPI.jpg)
