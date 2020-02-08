@@ -67,7 +67,7 @@ Procedure A, step 7:
 ![Put path to your image here ->](img/Dimming.jpg)
 
 Procedure B, UART:
-![Put path to your image here ->](imgUART.jpg)
+![Put path to your image here ->](img/UART.jpg)
 
 Procedure B, SPI:
 ![Put path to your image here ->](img/SPI.jpg)
