@@ -23,6 +23,8 @@
 */
 
 #define LED_BUILTIN 2
+#define DUTY_MAX 100
+#define FREQ 100
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -32,14 +34,28 @@ void setup() {
 
 void timedBlink(int interval){
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(interval);                       // wait for a second
+  delay(interval);                       // wait for the interval
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
   delay(interval);   
 }
 
+void dimmer(int freq, int duty) {
+  int period, onTime, offTime;
+  period = 1000/freq;
+  onTime = period * duty / 100;
+  offTime = period - onTime;
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(onTime);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(offTime);
+}
+
 // the loop function runs over and over again forever
 void loop() {
-  timedBlink(250);
-  timedBlink(500);
-  timedBlink(1000);
+  for(int i = 0; i < DUTY_MAX; i++){
+    dimmer(FREQ,i);
+  }
+  for(int i = DUTY_MAX; i > 0; i--){
+    dimmer(FREQ,i);
+  }
 }
